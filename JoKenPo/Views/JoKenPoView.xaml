@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="JoKenPo.Views.JoKenPoView"
+             Title="JoKenPoView">
+    <VerticalStackLayout>
+        <HorizontalStackLayout>
+            <Label
+                Text="Nome do Player: "
+                />
+            <Entry
+                Placeholder="Insira seu nome: "
+                Text ="{Binding nome}"
+                />
+            <Label
+                Text="Score: "
+                HorizontalOptions="End"/>
+        </HorizontalStackLayout>
+        <Image
+            Source=""
+            HeightRequest="50"
+            />
+        <Picker Title="Selecione sua opcao para jogar">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Rock</x:String>
+                    <x:String>Paper</x:String>
+                    <x:String>Scissor</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+        <Button
+            Text="Jogar"
+            />
+        <Label
+            Text=""/>
+    </VerticalStackLayout>
+</ContentPage>
